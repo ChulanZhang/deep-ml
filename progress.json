@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-18T18:15:32.252Z",
+  "generated_at": "2026-10-18T18:17:32.527Z",
   "items": {
     "problem:94": {
       "kind": "problem",
@@ -139,6 +139,19 @@
       "last_pushed_at": "2026-10-18T18:15:31.607Z",
       "language": "python",
       "lines": 19
+    },
+    "problem:960": {
+      "kind": "problem",
+      "id": "960",
+      "title": "Implement Multi-Head Attention Using Einsum",
+      "difficulty": "hard",
+      "category": "Deep Learning",
+      "url": "https://www.deep-ml.com/problems/960",
+      "path": "problems/0960-implement-multi-head-attention-using-einsum",
+      "first_solved_at": "2026-10-18T18:17:31.905Z",
+      "last_pushed_at": "2026-10-18T18:17:31.905Z",
+      "language": "python",
+      "lines": 69
     }
   }
 }
