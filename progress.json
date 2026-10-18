@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-18T18:02:58.451Z",
+  "generated_at": "2026-10-18T18:15:32.252Z",
   "items": {
     "problem:94": {
       "kind": "problem",
@@ -126,6 +126,19 @@
       "last_pushed_at": "2026-10-18T18:02:57.939Z",
       "language": "python",
       "lines": 57
+    },
+    "problem:966": {
+      "kind": "problem",
+      "id": "966",
+      "title": "Batched Attention Score Computation for Multiple Heads",
+      "difficulty": "medium",
+      "category": "Deep Learning",
+      "url": "https://www.deep-ml.com/problems/966",
+      "path": "problems/0966-batched-attention-score-computation-for-multiple-heads",
+      "first_solved_at": "2026-10-18T18:15:31.607Z",
+      "last_pushed_at": "2026-10-18T18:15:31.607Z",
+      "language": "python",
+      "lines": 19
     }
   }
 }
