@@ -14,7 +14,7 @@ def compute_qkv(X: torch.Tensor, W_q: torch.Tensor, W_k: torch.Tensor, W_v: torc
         Q, K, V matrices each of shape (seq_len, d_model)
     """
     # Your code here
-    Q = X @ W_q
+    Q = X @ W_q # matmul
     K = X @ W_k
     V = X @ W_v
     return Q, K, V
@@ -33,13 +33,15 @@ def self_attention(Q: torch.Tensor, K: torch.Tensor, V: torch.Tensor) -> torch.T
     """
     # Your code here
     d_k = Q.shape[-1]
-    scores = (Q @ K.transpose(-2, -1)) / (d_k ** 0.5)
+    scores = (Q @ K.transpose(0, 1)) / (d_k ** 0.5)
 
+    # self_attention = softmax[(Q * K.T)/(sqrt(d))] * V
     # softmax
     scores_max = torch.amax(scores, dim = -1, keepdim=True)
     exp_scores = torch.exp(scores - scores_max)
     attn_weights = exp_scores / torch.sum(exp_scores, dim=-1, keepdim=True)
-    return attn_weights @ V 
+    # attn_weights = torch.softmax(scores)
+    return attn_weights @ V
 
 def multi_head_attention(Q: torch.Tensor, K: torch.Tensor, V: torch.Tensor, n_heads: int) -> torch.Tensor:
     """
@@ -57,7 +59,7 @@ def multi_head_attention(Q: torch.Tensor, K: torch.Tensor, V: torch.Tensor, n_he
     if n_heads <= 0 or d_model%n_heads != 0:
         return ValueError("n_heads must be positive and divide d_model.")
     d_k = d_model // n_heads
-    
+
     Q_split = Q.reshape(seq_len, n_heads, d_k).transpose(0, 1)
     K_split = K.reshape(seq_len, n_heads, d_k).transpose(0, 1)
     V_split = V.reshape(seq_len, n_heads, d_k).transpose(0, 1)
