@@ -19,12 +19,12 @@ def self_attention(Q: torch.Tensor, K: torch.Tensor, V: torch.Tensor) -> torch.T
     Returns:
         Attention output of shape (seq_len, d_v)
     """
-    d_k = Q.shape[-1]
+    d_k = Q.shape[1]
     scores = Q @ K.T / d_k ** 0.5
 
     # stable softmax
-    scores = scores - torch.amax(scores, dim = -1, keepdim=True)
+    scores = scores - torch.amax(scores, dim = 1, keepdim=True)
     scores = torch.exp(scores)
-    attn_weights = scores / torch.sum(scores, dim = -1, keepdim=True)
+    attn_weights = scores / torch.sum(scores, dim = 1, keepdim=True)
     output = attn_weights @ V
     return output
