@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-18T01:58:18.163Z",
+  "generated_at": "2026-10-18T02:24:37.887Z",
   "items": {
     "problem:94": {
       "kind": "problem",
@@ -35,6 +35,19 @@
       "path": "math/0230-why-scale-by-sqrt-d-k",
       "first_solved_at": "2026-10-18T01:58:17.464Z",
       "last_pushed_at": "2026-10-18T01:58:17.464Z"
+    },
+    "problem:955": {
+      "kind": "problem",
+      "id": "955",
+      "title": "Simple Self-Attention Without Trainable Weights",
+      "difficulty": "easy",
+      "category": "Deep Learning",
+      "url": "https://www.deep-ml.com/problems/955",
+      "path": "problems/0955-simple-self-attention-without-trainable-weights",
+      "first_solved_at": "2026-10-18T02:24:37.328Z",
+      "last_pushed_at": "2026-10-18T02:24:37.328Z",
+      "language": "python",
+      "lines": 25
     }
   }
 }
