@@ -37,10 +37,10 @@ def self_attention(Q: torch.Tensor, K: torch.Tensor, V: torch.Tensor) -> torch.T
 
     # self_attention = softmax[(Q * K.T)/(sqrt(d))] * V
     # softmax
-    scores_max = torch.amax(scores, dim = -1, keepdim=True)
-    exp_scores = torch.exp(scores - scores_max)
-    attn_weights = exp_scores / torch.sum(exp_scores, dim=-1, keepdim=True)
-    # attn_weights = torch.softmax(scores)
+    # scores_max = torch.amax(scores, dim = -1, keepdim=True)
+    # exp_scores = torch.exp(scores - scores_max)
+    # attn_weights = exp_scores / torch.sum(exp_scores, dim=-1, keepdim=True)
+    attn_weights = torch.softmax(scores, dim = -1)
     return attn_weights @ V
 
 def multi_head_attention(Q: torch.Tensor, K: torch.Tensor, V: torch.Tensor, n_heads: int) -> torch.Tensor:
