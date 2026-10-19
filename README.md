@@ -2,7 +2,7 @@
 
 My machine learning practice from [Deep-ML](https://www.deep-ml.com). Every solution here was written by hand.
 
-**13** solved · 11 problems · 0 labs · 2 math
+**14** solved · 11 problems · 1 labs · 2 math
 
 ![Coverage](./coverage.svg)
 
@@ -23,6 +23,12 @@ My machine learning practice from [Deep-ML](https://www.deep-ml.com). Every solu
 | [Implement Multi-Head Attention](https://www.deep-ml.com/problems/94) | hard | 2026-10-15 | [solution](problems/0094-implement-multi-head-attention) |
 | [Implement Multi-Head Attention Using Einsum](https://www.deep-ml.com/problems/960) | hard | 2026-10-18 | [solution](problems/0960-implement-multi-head-attention-using-einsum) |
 | [Implement Multi-Head Self-Attention](https://www.deep-ml.com/problems/904) | hard | 2026-10-18 | [solution](problems/0904-implement-multi-head-self-attention) |
+
+## Labs
+
+| | Difficulty | Solved | |
+| --- | --- | --- | --- |
+| [Design Your Own Attention Mechanism](https://www.deep-ml.com/labs/10) | medium | 2026-10-19 | [solution](labs/0010-design-your-own-attention-mechanism) |
 
 ## Math
 
